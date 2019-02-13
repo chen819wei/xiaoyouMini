@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/used/used",
+    "pages/require/require",
+    "pages/message/message",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "效友",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor":"#d81e06",
+    "borderStyle":"white",
+    "list": [{
+      "selectedIconPath": "images/tabBarIcon/selectHome.png",
+      "iconPath": "images/tabBarIcon/home.png",
+      "pagePath": "pages/home/home",
+      "text": "首页"
+    }, {
+      "selectedIconPath": "images/tabBarIcon/selectRequire.png",
+      "iconPath": "images/tabBarIcon/require.png",
+    "pagePath": "pages/require/require",
+      "text": "需求大厅"
+    }, {
+      "selectedIconPath": "images/tabBarIcon/selectUsed.png",
+      "iconPath": "images/tabBarIcon/used.png",
+      "pagePath": "pages/used/used",
+      "text": "二手市场"
+    },
+    
+    {
+      "selectedIconPath": "images/tabBarIcon/selectMessage.png",
+      "iconPath": "images/tabBarIcon/message.png",
+      "pagePath": "pages/message/message",
+      "text": "消息"
+    },
+    {
+      "selectedIconPath": "images/tabBarIcon/selectPersonal.png",
+      "iconPath": "images/tabBarIcon/personal.png",
+      "pagePath": "pages/personal/personal",
+      "text": "个人中心"
+    }]
+}
+}
