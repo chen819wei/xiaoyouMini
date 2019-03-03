@@ -1,19 +1,16 @@
-// pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    movies: [
+      { url: 'http://120.77.221.125/xue/images/w.png' },
+      { url: 'http://120.77.221.125/xue/images/x.png' },
+      { url: 'http://120.77.221.125/xue/images/y.png' },
+      { url: 'http://120.77.221.125/xue/images/z.png' },
+    ] 
+  },
+  onLoad: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
