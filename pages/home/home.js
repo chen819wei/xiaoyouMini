@@ -1,13 +1,35 @@
+import {
+  ClassicModel
+} from '../../models/classic/classic.js'
+let classicModel = new ClassicModel();
+
 Page({
   data: {
-    movies: [
-      { url: 'http://120.77.221.125/xue/images/w.png' },
-      { url: 'http://120.77.221.125/xue/images/x.png' },
-      { url: 'http://120.77.221.125/xue/images/y.png' },
-      { url: 'http://120.77.221.125/xue/images/z.png' },
-    ] 
+    movies: [{
+        url: 'http://120.77.221.125/xue/images/w.png'
+      },
+      {
+        url: 'http://120.77.221.125/xue/images/x.png'
+      },
+      {
+        url: 'http://120.77.221.125/xue/images/y.png'
+      },
+      {
+        url: 'http://120.77.221.125/xue/images/z.png'
+      },
+    ]
   },
   onLoad: function () {
+    classicModel.getLatest((res)=>{
+      console.log(res);
+    });
+    
+    // wx.request({
+    //   url: 'http://localhost/mini/mini_get.action',
+    //   success(res) {
+    //     console.log(res.data);
+    //   }
+    // })
 
   },
 

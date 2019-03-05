@@ -1,10 +1,16 @@
 // pages/used/used.js
+import {
+  ListModel
+} from '../../models/listModel.js'
+
+var listModel = new ListModel();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    books:[]
 
   },
 
@@ -12,6 +18,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    listModel.getSelect().then((res) => {
+      console.log(res[0]);
+      this.setData({
+        books: res
+      })
+})
 
   },
 

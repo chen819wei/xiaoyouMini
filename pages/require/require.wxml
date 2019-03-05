@@ -1,2 +1,22 @@
-<!--pages/require/require.wxml-->
+<!--pages/used/used.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='box'>
+      <image src='/images/icon/search.png'></image>
+      <text>搜索</text>
+    </view>
+  </view>
+  <view class="sub-container">
+    <image class='head-img' src="/images/book/quality.png"></image>
+    <view class='books-container'>
+      <block wx:for="{{listData}}">
+        <book book="{{item}}" />
+      </block>
+    </view>
+  </view>
+</view>
 
+
+<!-- <block wx:for="{{books}}">
+  <book book="{{item}}" />
+</block> -->
