@@ -7,9 +7,9 @@
     </view>
   </view>
   <view class="sub-container">
-    <image class='head-img' src="/images/book/quality.png"></image>
+    <image class='head-img' src="/images/book/latest.png"></image>
     <view class='books-container'>
-      <block wx:for="{{listData}}">
+      <block wx:for="{{listData}}" wx:key="">
         <book book="{{item}}" />
       </block>
     </view>

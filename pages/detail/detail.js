@@ -1,46 +1,34 @@
+// pages/detail/detail.js
 import {
   ListModel
 } from '../../models/listModel.js'
 
 var listModel = new ListModel();
-
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    movies: [{
-        url: 'http://120.77.221.125/xue/images/w.png'
-      },
-      {
-        url: 'http://120.77.221.125/xue/images/x.png'
-      },
-      {
-        url: 'http://120.77.221.125/xue/images/y.png'
-      },
-      {
-        url: 'http://120.77.221.125/xue/images/z.png'
-      },
-    ],
-    listData: []
+    product:null
+   
   },
-  onLoad: function () {
-    listModel.getSelect().then((res) => {
-      console.log(res[0]);
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    //id
+    const id = options.product_release_id;
+    console.log(id);
+  
+    const detail=listModel.getDetail(id);
+    detail.then(res=>{
       this.setData({
-        listData:res
+        product:res
       })
-    
-     console.log(this.data.listData[0]);
-
     })
-    
-    // wx.request({
-    //   url: 'http://localhost/mini/mini_get.action',
-    //   success(res) {
-    //     console.log(res.data);
-    //   }
-    // })
-
   },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

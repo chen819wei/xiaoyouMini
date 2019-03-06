@@ -7,6 +7,7 @@
   align-items: center;
   width:100%;
   padding-top: 0;
+  
 }
 
  .sub-container{
@@ -60,8 +61,10 @@
 
 .head-img{
   width:106rpx;
-  height:34rpx;
+  height:68rpx;
   margin-top:40rpx;
+  background-color: #ffffff;
+
 }
 
 .box image{

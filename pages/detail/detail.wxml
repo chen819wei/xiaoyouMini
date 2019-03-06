@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+
+<view class='container'>
+  <view class="head">
+    <image src="{{product.picture}}"></image>
+    <text class = 'title'>{{product.title}}</text>
+    <text class='price'>{{product.price}} </text>
+  </view>
+</view>>

@@ -5,9 +5,9 @@ Component({
    */
   properties: {
     book: Object,
-    showLike:{
-      type:Boolean,
-      value:true
+    showLike: {
+      type: Boolean,
+      value: true
     }
   },
 
@@ -15,22 +15,23 @@ Component({
    * 组件的初始数据
    */
   data: {
-    title:String,
-    author:String,
-    img:String
+    title: String,
+    author: String,
+    img: String
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    onTap:function(event){
-      this.triggerEvent('booktap', {
-        bid:this.properties.book.id
-      }, {})
+    onTap: function(event) {
+      const product_release_id=this.properties.book.product_release_id;
+      console.log(product_release_id);
       wx.navigateTo({
-        url: '../../pages/detail/detail?bid='+this.properties.book.id,
+        url: '../../pages/detail/detail?product_release_id=' + product_release_id,
       })
+
+
     }
   }
 })

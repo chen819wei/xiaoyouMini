@@ -1,10 +1,10 @@
 <view bind:tap="onTap" class="container">
-  <image  src="{{book.image||book.img}}"></image>
+  <image  src="{{book.picture||book.img}}"></image>
   <view class="description">
     <text class='title'>{{book.title}}</text>
-    <text class='author'>{{book.content}}</text>
+    <text class='author'>{{book.description}}</text>
     <view wx:if="{{showLike}}" class='foot'>
-      <text class="footer">￥{{book.fav_nums}}</text> 
+      <text class="footer">￥{{book.price}}</text> 
     </view>
   </view>
 </view>
