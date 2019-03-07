@@ -5,26 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hasUserInfo: true,
+    userInfo: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getUserInfo({
-      success: data => {
-        console.log(data);
+    
+  },
+  hasGottenUserInfo: function() {
+    wx.getSetting({
+      success: (data) => {
+        if (data.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: (data) => {
+              this.setData({
+                hasUserInfo: true,
+                userInfo: data.userInfo
+              })
+            }
+          })
+        } else {
+          this.setData({
+            hasUserInfo: false
+          })
+        }
       }
     })
   },
-  getUserInfo: function (evevt) {
-    console.log(evevt);
-  },
-  onJumpToRelease: function (evevt) {
-    wx.navigateTo({
-      url: '/pages/release/release',
-    })
+
+  onGetUserInfo: function(event) {
+    let userInfo = event.detail.userInfo
+    if (userInfo) {
+      this.setData({
+        hasUserInfo: true,
+        userInfo: userInfo
+      })
+    }
   },
 
   /**
@@ -38,7 +57,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.hasGottenUserInfo()
   },
 
   /**
