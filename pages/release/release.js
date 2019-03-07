@@ -1,4 +1,4 @@
-// pages/personal/personal.js
+// pages/release/release.js
 Page({
 
   /**
@@ -12,19 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getUserInfo({
-      success: data => {
-        console.log(data);
-      }
-    })
-  },
-  getUserInfo: function (evevt) {
-    console.log(evevt);
-  },
-  onJumpToRelease: function (evevt) {
-    wx.navigateTo({
-      url: '/pages/release/release',
-    })
+
   },
 
   /**

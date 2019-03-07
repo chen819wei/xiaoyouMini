@@ -5,7 +5,8 @@
     "pages/require/require",
     "pages/message/message",
     "pages/personal/personal",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/release/release"
   ],
   "window": {
     "backgroundTextStyle": "light",

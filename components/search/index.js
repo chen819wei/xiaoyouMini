@@ -21,6 +21,9 @@ Component({
     onCancel: function (event) {
       this.triggerEvent('cancel',{},{})
     },
+    onDelete:function(event){
+      
+    }
     
   }
 })

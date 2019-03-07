@@ -1,2 +1,21 @@
-<!--pages/personal/personal.wxml-->
+<view class="container">
+    <image src="/images/my/my@bg.png" class="bg"></image>
+    <img-btn-cmp wx:if="{{!hasUserInfo}}" open-type="getUserInfo" class="avatar-position" bind:getuserinfo="onGetUserInfo">
+        <image slot="img" class="avatar" src="/images/my/my.png" />
+    </img-btn-cmp>
+    <view class="avatar-container avatar-position">
+        <image src="{{userInfo.avatarUrl}}" wx:if="{{hasUserInfo}}" class="avatar" />
+        <open-data wx:if="{{hasUserInfo}}" type="userNickName"></open-data>
+    </view>
+    <view class="about-container">
+        <view bind:tap="onJumpToRelease" class="about-us">
+            <image src="/images/my/require.png" />
+            <text class="description">发布需求</text>
+        </view>
+        <view bind:tap="onJumpToRelease" class="about-us">
+            <image src="/images/my/used.jpg" />
+            <text class="description">发布二手</text>
+        </view>
+    </view>
 
+</view>
