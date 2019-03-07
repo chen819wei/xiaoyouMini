@@ -1,9 +1,34 @@
-<!--pages/detail/detail.wxml-->
+<!-- pages/detail/detail.wxml -->
 
 <view class='container'>
-  <view class="head">
-    <image src="{{product.picture}}"></image>
-    <text class = 'title'>{{product.title}}</text>
-    <text class='price'>{{product.price}} </text>
-  </view>
-</view>>
+    <view class="head">
+        <image src="{{product.picture}}"></image>
+        <text class='title'>{{product.title}}</text>
+        <text class='price'>￥{{product.price}}</text>
+    </view>
+    <view class="sub-container">
+        <text class="headline">介绍</text>
+        <text class="description">{{product.description}}</text>
+        <!-- <view class="description">
+            <block wx:for="{{tagData}}" wx:key="">
+                <c-tag text="{{item.tagName}}" />
+            </block>
+        </view> -->
+    </view>
+    <view class="sub-container">
+        <text class="headline">联系方式</text>
+        <view class="detail-contact">
+            <view class="vertical contact">
+                <text >联系人：</text>
+                <text >联系电话：</text>
+                <text >联系地址：</text>
+            </view>
+            <view class="vertical">
+                <text >{{product.user_name}}</text>
+                <text >{{product.phone_number}}</text>
+                <text >{{product.address}}</text>
+            </view>
+
+        </view>
+    </view>
+</view>

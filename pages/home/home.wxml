@@ -1,7 +1,7 @@
 <!-- pages/home/home.wxml -->
-<view class="container">
+<view wx:if="{{!searching}}" class="container">
   <view class="header">
-    <view class='box'>
+    <view class='box' bind:tap="onSearching">
       <image src="/images/icon/search.png" />
       <text>搜索</text>
     </view>
@@ -21,5 +21,5 @@
       </block>
     </view>
   </view>
- 
 </view>
+ <c-search bind:cancel='onCancel' wx:if="{{searching}}"/>

@@ -19,26 +19,25 @@ Page({
         url: 'http://120.77.221.125/xue/images/z.png'
       },
     ],
-    listData: []
+    listData: [],
+    searching:false
   },
   onLoad: function () {
     listModel.getSelect().then((res) => {
-      console.log(res[0]);
       this.setData({
         listData:res
       })
-    
-     console.log(this.data.listData[0]);
-
     })
-    
-    // wx.request({
-    //   url: 'http://localhost/mini/mini_get.action',
-    //   success(res) {
-    //     console.log(res.data);
-    //   }
-    // })
-
+  },
+  onSearching(event){
+    this.setData({
+      searching:true
+    })
+  },
+  onCancel(event){
+    this.setData({
+      searching:false
+    })
   },
 
 

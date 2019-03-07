@@ -10,7 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    product:null
+    product:null,
+    tagData:[],
    
   },
 
@@ -23,10 +24,18 @@ Page({
     console.log(id);
   
     const detail=listModel.getDetail(id);
+    
     detail.then(res=>{
       this.setData({
         product:res
       })
+    })
+    const tag = listModel.getTag();
+    tag.then(res=>{
+      this.setData({
+        tagData:res
+      })
+      console.log(res);
     })
   },
 
