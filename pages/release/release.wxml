@@ -24,7 +24,7 @@
 
     <!-- 添加图片按钮  -->
     <view class="question-images-tool">
-      <button type="default" size="mini" bindtap="chooseImage" wx:if="{{images.length < 3}}">添加图片</button>
+      <button type="default" size="mini" bindtap="chooseImage" wx:if="{{images.length < 4}}">添加图片</button>
     </view>
 
     <!-- 图片缩略图  -->

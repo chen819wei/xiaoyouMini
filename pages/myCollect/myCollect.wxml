@@ -1,0 +1,10 @@
+<!--pages/myCollect/myCollect.wxml-->
+<view class='container'>
+  <view class="sub-container">
+    <view class='books-container'>
+      <block wx:for="{{listData}}" wx:key="">
+        <book book="{{item}}" />
+      </block>
+    </view>
+  </view>
+</view>

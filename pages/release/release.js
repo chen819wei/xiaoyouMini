@@ -15,7 +15,7 @@ Page({
     address: '',
     contact_name_count: 0,
     phone_number_count: 0,
-    address_count:0
+    address_count: 0
   },
   handleTitleInput: function(event) {
     this.data.title = event.detail.value
@@ -37,8 +37,8 @@ Page({
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success: res => {
-        const images = this.data.images.concat(res.tempFilePaths)
-        this.data.images = images.length <= 4 ? images : images.slice(0, 4)
+        const images = this.data.images.concat(res.tempFilePaths);
+        this.data.images = images.length <= 4 ? images : images.slice(0, 4);
         this.setData({
           images: images
         })
@@ -46,17 +46,16 @@ Page({
     })
   },
   removeImage: function(event) {
-    const idx = e.target.dataset.idx
-    const images = this.data.images.splice(idx, 1)
+    const idx = event.target.dataset.idx;
+    this.data.images.splice(idx, 1)
     this.setData({
-      images: images
+      images: this.data.images
     })
   },
 
   handleImagePreview: function(event) {
-    const idx = e.target.dataset.idx
-    const images = this.data.images
-
+    const idx = event.target.dataset.idx;
+    const images = this.data.images;
     wx.previewImage({
       current: images[idx],
       urls: images,

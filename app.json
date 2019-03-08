@@ -6,7 +6,9 @@
     "pages/message/message",
     "pages/personal/personal",
     "pages/detail/detail",
-    "pages/release/release"
+    "pages/release/release",
+    "pages/setting/setting",
+    "pages/myCollect/myCollect"
   ],
   "window": {
     "backgroundTextStyle": "light",

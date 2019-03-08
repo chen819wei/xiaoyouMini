@@ -61,7 +61,37 @@
   color:#999999;
 }
 
-
+/* 列表 */
+.person-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  margin-top: 40rpx;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 80rpx;
+  width: 100%;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: gray;
+  font-size: 40rpx;
+  margin: 10rpx;
+}
+.person-line {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}
 
 
 
