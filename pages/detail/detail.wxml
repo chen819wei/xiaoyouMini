@@ -28,7 +28,6 @@
                 <text >{{product.phone_number}}</text>
                 <text >{{product.address}}</text>
             </view>
-
         </view>
     </view>
 </view>

@@ -1,2 +1,65 @@
-<!--pages/release/release.wxml-->
-<text>pages/release/release.wxml</text>
+<view class="question-form">
+
+  <view class="question-input-area">
+
+    <!-- 问题标题  -->
+    <view class="question-title-wrap">
+      <input class="question-title" placeholder="请输入标题" maxlength="40" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput"></input>
+      <view class="title-input-counter">{{titleCount}}/40</view>
+    </view>
+
+    <!-- 问题正文  -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入详细介绍" maxlength="255" placeholder-style="color:#b3b3b3;font-size:14px;" style="height: 12rem" bindinput="handleContentInput" />
+          <view class="weui-textarea-counter">{{contentCount}}/255</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="question-images-area">
+
+    <!-- 添加图片按钮  -->
+    <view class="question-images-tool">
+      <button type="default" size="mini" bindtap="chooseImage" wx:if="{{images.length < 3}}">添加图片</button>
+    </view>
+
+    <!-- 图片缩略图  -->
+    <view class="question-images">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  <view class="sub-container">
+    <text class="headline">联系方式</text>
+    <view class="detail-contact">
+      <view class="vertical">
+        <view class="question-title-wrap">
+          <input class="question-title" placeholder="请输联系人" maxlength="5" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="contactNameInput"></input>
+          <view class="title-input-counter">{{contact_name_count}}/5</view>
+        </view>
+        <view class="question-title-wrap">
+          <input class="question-title" placeholder="请输联系电话" maxlength="11" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="phoneNumberInput"></input>
+          <view class="title-input-counter">{{phone_number_count}}/11</view>
+        </view>
+         <view class="question-title-wrap">
+          <input class="question-title" placeholder="请输联系地址" maxlength="50" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="addressInput"></input>
+          <view class="title-input-counter">{{address_count}}/50</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 提交表单按钮  -->
+  <button class="weui-btn" type="primary" bindtap="submitForm">发布</button>
+
+</view>
