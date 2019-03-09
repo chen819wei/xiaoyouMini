@@ -34,11 +34,17 @@
       <text class="item-text">我的需求</text>
     </view>
     <view class="person-line"></view>
-    <view class="list-item"  bindtap='feedback'>
+    <view class="list-item" bindtap='about'>
+      <image class="item-image" src="../../images/my/aboutUs.png"></image>
+      <text class="item-text">关于效友</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item" bindtap='feedback'>
       <image class="item-image" src="../../images/my/feedback.png"></image>
       <text class="item-text">意见反馈</text>
     </view>
-    <view class="person-line" ></view>
+
+    <view class="person-line"></view>
     <view class="list-item" bindtap='engineer'>
       <image class="item-image" src="../../images/my/certification.png"></image>
       <text class="item-text">工程师认证</text>

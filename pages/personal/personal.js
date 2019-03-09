@@ -65,6 +65,11 @@ Page({
       url: '/pages/myCollect/myCollect?id=3',
     })
   },
+  about:function(event){
+    wx.navigateTo({
+      url: '/pages/about/about',
+    })
+  },
   feedback:function(event){
     wx.navigateTo({
       url: '/pages/release/release',

@@ -8,7 +8,8 @@
     "pages/detail/detail",
     "pages/release/release",
     "pages/setting/setting",
-    "pages/myCollect/myCollect"
+    "pages/myCollect/myCollect",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
