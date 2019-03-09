@@ -77,7 +77,7 @@ Page({
   },
   setting:function(event){
     wx.navigateTo({
-      url: '/pages/release/release',
+      url: '/pages/setting/setting',
     })
   },
 

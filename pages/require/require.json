@@ -1,5 +1,7 @@
 {
   "usingComponents": {
     "book":"/components/book/index"
-  }
+  },
+  "navigationBarTitleText": "需求大厅"
+
 }

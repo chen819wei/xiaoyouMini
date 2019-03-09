@@ -33,13 +33,13 @@
       <image class="item-image" src="../../images/my/require.png"></image>
       <text class="item-text">我的需求</text>
     </view>
-    <view class="person-line" bindtap='feedback'></view>
-    <view class="list-item">
+    <view class="person-line"></view>
+    <view class="list-item"  bindtap='feedback'>
       <image class="item-image" src="../../images/my/feedback.png"></image>
       <text class="item-text">意见反馈</text>
     </view>
-    <view class="person-line" bindtap='engineer'></view>
-    <view class="list-item">
+    <view class="person-line" ></view>
+    <view class="list-item" bindtap='engineer'>
       <image class="item-image" src="../../images/my/certification.png"></image>
       <text class="item-text">工程师认证</text>
     </view>

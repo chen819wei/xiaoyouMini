@@ -48,7 +48,7 @@
           <view class="title-input-counter">{{contact_name_count}}/5</view>
         </view>
         <view class="question-title-wrap">
-          <input class="question-title" placeholder="请输联系电话" maxlength="11" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="phoneNumberInput"></input>
+          <input type="number" class="question-title" placeholder="请输联系电话" maxlength="11" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="phoneNumberInput"></input>
           <view class="title-input-counter">{{phone_number_count}}/11</view>
         </view>
          <view class="question-title-wrap">

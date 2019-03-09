@@ -2,5 +2,6 @@
   "usingComponents": {
     "book":"/components/book/index",
     "c-search":"/components/search/index"
-  }
+  },
+  "navigationBarTitleText": "首页"
 }

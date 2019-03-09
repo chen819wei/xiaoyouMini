@@ -1,2 +1,16 @@
-<!--pages/setting/setting.wxml-->
-<text>pages/setting/setting.wxml</text>
+<!-- pages/setting/setting.wxml -->
+<view class="container">
+    <view class="person-list"></view>
+    <view class="list-item" bindtap='changeInfo'>
+        <text class="item-text">个人信息</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item" bindtap='changeInfo'>
+        <text class="item-text">绑定账号</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item" bindtap='changeInfo'>
+        <text class="item-text">注册效友</text>
+    </view>
+    <view class="person-line"></view>
+</view>
