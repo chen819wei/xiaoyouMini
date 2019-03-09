@@ -1,5 +1,4 @@
 <!-- pages/detail/detail.wxml -->
-
 <view class='container'>
     <view class="head">
         <image src="{{product.picture}}"></image>
@@ -19,15 +18,24 @@
         <text class="headline">联系方式</text>
         <view class="detail-contact">
             <view class="vertical contact">
-                <text >联系人：</text>
-                <text >联系电话：</text>
-                <text >联系地址：</text>
+                <text>联系人：</text>
+                <text>联系电话：</text>
+                <text>联系地址：</text>
             </view>
             <view class="vertical">
-                <text >{{product.user_name}}</text>
-                <text >{{product.phone_number}}</text>
-                <text >{{product.address}}</text>
+                <text>{{product.user_name}}</text>
+                <text>{{product.phone_number}}</text>
+                <text>{{product.address}}</text>
             </view>
+        </view>
+    </view>
+    <view class='bottom-container'>
+        <image class="epsoide" src="/images/my/chat.png" />
+        <view class="like-container">
+            <like-cmp bind:like="onLike" class="like" like="{{like}}" count="{{count}}" />
+            <img-btn-cmp class="share-btn" open-type="share">
+                <image class="share" slot="img" src="/images/icon/share.png" />
+            </img-btn-cmp>
         </view>
     </view>
 </view>
